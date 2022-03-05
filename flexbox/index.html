@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<script src="https://kit.fontawesome.com/3d4f8dc90d.js" crossorigin="anonymous"></script>
+<style>
+      :root {
+        --clr-primary: #6e6e6e;
+        --clr-secondary: #adadad;
+        --clr-desc: #757575;
+        --clr-option: #54d7ff;
+      }
+      * {
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        background-color: #f1f1f1;
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+      }
+      .card {
+        flex-basis: 25%;
+        margin: 10px;
+      }
+      .card-image img {
+        display: block;
+        background-position: center;
+        height: auto;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        width: 100%;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        border-radius: 5px 5px 0 0;
+      }
+      .card-detail {
+        padding: 10px;
+        background-color: white;
+        border-radius: 0 0 5px 5px;
+      }
+      .card-title {
+        margin: 0;
+        padding: 0;
+      }
+      .card-title h4 {
+        color: var(--clr-primary);
+      }
+      .sub-title h6 {
+        color: var(--clr-secondary);
+        font-size: 10px;
+      }
+      .card-desc p{
+        padding-top: 10px;
+        font-size: 8px;
+        font-weight: 600;
+        color: var(--clr-desc)
+      }
+      .card-option {
+        display: flex;
+        padding-top: 10px;
+      }
+      .card-option span{
+        font-size: 10px;
+        font-weight: bolder;
+        color: var(--clr-option);
+      }
+      .card-option .share{
+        flex-basis: 20%;
+        padding-right: 10px;
+      }
+      .card-option .explore{
+        flex-basis: 70%;
+      }
+      .explore:hover {
+        cursor: pointer;
+      }
+      .fa-angle-down {
+        font-size: 12px;
+        text-align: right;
+        flex-basis: 10%;
+      }
+      .card-profile {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        background-color: white;
+      }
+      .card-profile img{
+        vertical-align: middle;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+      .profile-desc {
+        margin: 0 10px;
+      }
+      .profile-desc h6 {
+        color: var(--clr-primary);
+      }
+      .profile-desc p {
+        font-size: 8px
+      }
+      .card-icon {
+        text-align: right;
+        background-color: white;
+        padding: 5px 0;
+        border-radius: 0 0 5px 5px;
+      }
+      .card-icon i{
+        margin-right: 10px;
+      }
+
+      @media (max-width: 600px) {
+      .flex-container {
+        flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1498598457418-36ef20772bb9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dmlld3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div class="card-detail">
+          <div class="card-title">
+            <div class="main-title">
+              <h4>Top Winter Locations</h4>
+            </div>
+            <div class="sub-title">
+              <h6>More than 200 locations</h6>
+            </div>
+          </div>
+          <div class="card-desc">
+            <p>Cards provide context and an entry point to more robust information and views and their context and quantity can very greatly</p>
+          </div>
+          <div class="card-option">
+            <span class="share">SHARE</span>
+            <span class="explore">EXPLORE</span>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1515019915774-f4887104b715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHZpZXd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div class="card-detail">
+          <div class="card-title">
+            <div class="main-title">
+              <h4>Top Winter Locations</h4>
+            </div>
+            <div class="sub-title">
+              <h6>More than 200 locations</h6>
+            </div>
+          </div>
+          <div class="card-desc" id="desc">
+            <p>Cards provide context and an entry point to more robust information and views and their context and quantity can very greatly</p>
+          </div>
+          <div class="card-option">
+            <span class="share">SHARE</span>
+            <span class="explore" onclick="popUp()">EXPLORE</span>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-profile">
+          <img src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=785&q=80" alt="profil image">
+          <div class="profile-desc">
+            <h6>Asep</h6>
+            <p>20 min ago</p>
+          </div>
+        </div>
+        <div class="card-image">
+          <img src="https://oceanview4luz.files.wordpress.com/2013/01/sunset-for-front-room-i.jpg" alt="">
+        </div>
+        <div class="card-detail">
+          <div class="card-title">
+            <div class="main-title">
+              <h4>Top Winter Locations</h4>
+            </div>
+            <div class="sub-title">
+              <h6>More than 200 locations</h6>
+            </div>
+          </div>
+          <div class="card-desc">
+            <p>Cards provide context and an entry point to more robust information and views and their context and quantity can very greatly</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1500926165259-30ef3079d477?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+        </div>
+        <div class="card-icon">
+          <i class="fa-solid fa-heart" style="font-size:14px;"></i>
+          <i class="fa-solid fa-bookmark" style="font-size:14px;"></i>
+          <i class="fa-solid fa-location-dot" style="font-size:14px;"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function popUp() {
+      var popup = document.getElementById("desc");
+      if (popup.style.display === "none") {
+        popup.style.display = "block";
+      } else {
+        popup.style.display = "none";
+      }
+    }
+</script>
+</html>
